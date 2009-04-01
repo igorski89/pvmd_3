@@ -5,7 +5,6 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Hashtable;
@@ -112,7 +111,7 @@ public class MainPanel extends JPanel {
 				openFileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
 				openFileChooser.setMultiSelectionEnabled(false);
 				// TODO:убрать в релизе, а то будет падать
-				openFileChooser.setCurrentDirectory(new File("/Users/igorevsukov/Documents/DNU/PVMD/PVMD_3_data/"));
+//				openFileChooser.setCurrentDirectory(new File("/Users/igorevsukov/Documents/DNU/PVMD/PVMD_3_data/"));
 				if (openFileChooser.showOpenDialog(getParent()) == JFileChooser.APPROVE_OPTION){
 					try {
 						commonWeb.load(openFileChooser.getSelectedFile().getAbsolutePath());
